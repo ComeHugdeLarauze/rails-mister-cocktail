@@ -1,0 +1,8 @@
+<div class="container">
+  <div class='text-center'>
+    <%= simple_form_for @cocktail do |f| %>
+      <%= f.input :name  %>
+      <%= f.submit "Add this cocktail", class: 'btn btn-danger' %>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+
+<div class="container text-center">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <h1>Your Cocktail</h1>
+      <h2><em><%= @cocktail.name %></em></h2>
+      <hr>
+      <%= link_to "Back to cocktails", cocktails_path %>
+       <hr>
+      <%= link_to "Create doses", new_cocktail_dose_path(@cocktail) %>
+       <hr>
+      <%= link_to "Delete", cocktail_path(@cocktail), method: :delete %>
+    </div>
+    <hr>
+    <div class="col-md-6 col-md-offset-3">
+      <h3>* * * * Doses * * * *</h3>
+      <% @cocktail.doses.each do |dose| %>
+       <p><%= dose.description%>, <%= dose.ingredient.name %></p>
+      <% end %>
+    </div>
+  </div>
+</div>
