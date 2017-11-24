@@ -3,6 +3,8 @@
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
       <h1>Your Cocktail</h1>
+      <div><%= cl_image_tag("IMG_2780.jpg",
+      width: 400, height: 300, crop: :fill) %></div>
       <h2><em><%= @cocktail.name %></em></h2>
       <hr>
       <%= link_to "Back to cocktails", cocktails_path %>
