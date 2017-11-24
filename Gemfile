@@ -38,8 +38,10 @@ gem 'bootstrap-sass' # Bootstrap v3
 gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'jquery-rails' # Add this line if you use Rails 5.1
-
+gem 'carrierwave', '~> 1.2'
+gem 'figaro'
 ruby '2.3.5'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

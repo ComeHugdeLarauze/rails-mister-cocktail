@@ -8,8 +8,14 @@
   border-radius: 3px;
   text-align: center;
   box-shadow: 1px;
-  background-image: url('https://static.pexels.com/photos/109275/pexels-photo-109275.jpeg')
+  background-image: url('https://static.pexels.com/photos/298719/pexels-photo-298719.jpeg')
 }
+
+.card h2 {
+  text-decoration: none;
+  justify-content: center;
+}
+
 .card-user {
   position: absolute;
   right: 10px;
@@ -30,8 +36,6 @@
   left: 10px;
 }
 .card-description h2 {
-  text-decoration: none;
-  justify-content: center;
   font-size: 24px;
 }
 .card-description p {
