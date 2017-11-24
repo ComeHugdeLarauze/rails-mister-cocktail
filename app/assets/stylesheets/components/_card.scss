@@ -7,7 +7,8 @@
   position: relative;
   border-radius: 3px;
   text-align: center;
-  box-shadow: 1px;
+  box-shadow: 2px;
+  margin-bottom: 25px;
 }
 
 .card h2 {
@@ -35,8 +36,15 @@
   left: 10px;
 }
 .card-description h2 {
-  font-size: 24px;
+  font-size: 23px;
 }
+
+.card-description a {
+  color: white;
+  text-decoration: none;
+  font-size: 23px;
+}
+
 .card-description p {
   font-size: 14px;
   opacity: 0.7;
@@ -53,5 +61,5 @@
   opacity: 0;
 }
 .card-link:hover {
-  opacity: 0.1;
+  opacity: 0.3;
 }

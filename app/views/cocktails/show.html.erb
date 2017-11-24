@@ -2,10 +2,14 @@
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
       <h1>Your Cocktail</h1>
-      <% if @cocktail.photo %>
-        <div><%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %></div>
-      <%# else %>
-        <!-- <div><%# "" %></div> -->
+      <% if @cocktail.photo? %>
+          <div>
+            <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
+          </div>
+      <% else %>
+          <div>
+            <%= image_tag 'https://picsum.photos/400/200' %>
+          </div>
       <% end %>
       <hr>
       <h2><em><%= @cocktail.name %></em></h2>
