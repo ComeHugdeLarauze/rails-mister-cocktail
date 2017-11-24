@@ -1,10 +1,13 @@
-
 <div class="container text-center">
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
       <h1>Your Cocktail</h1>
-      <div><%= cl_image_tag("IMG_2780.jpg",
-      width: 400, height: 300, crop: :fill) %></div>
+      <% if @cocktail.photo %>
+        <div><%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %></div>
+      <%# else %>
+        <!-- <div><%# "" %></div> -->
+      <% end %>
+      <hr>
       <h2><em><%= @cocktail.name %></em></h2>
       <hr>
       <%= link_to "Back to cocktails", cocktails_path %>

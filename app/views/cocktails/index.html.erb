@@ -5,11 +5,19 @@
   <h1 class="text-center">Cocktails</h1>
   <div class="row">
     <% @cocktails.each do |c| %>
-      <div class="col-md-3">
-        <div class="card">
-          <h2><%= link_to c.name, cocktail_path(c) %></h2>
+      <div class="col-md-3 col-xs-6">
+      <% if c.photo.nil? %>
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+           url('<%= cl_image_path c.photo, height: 300, width: 400, crop: :fill %>')">
+      <% else %>
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+           url('<%= cl_image_path c.photo, height: 300, width: 400, crop: :fill %>')">
+            <div class="card-description">
+      <% end %>
+              <h2><%= link_to c.name, cocktail_path(c) %></h2>
+            </div>
+          </div>
         </div>
-      </div>
     <% end %>
   </div>
   <%= link_to "Add Cocktails", new_cocktail_path %>

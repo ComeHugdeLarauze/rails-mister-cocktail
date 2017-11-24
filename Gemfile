@@ -41,6 +41,7 @@ gem 'jquery-rails' # Add this line if you use Rails 5.1
 gem 'carrierwave', '~> 1.2'
 gem 'figaro'
 gem 'cloudinary'
+gem 'carrierwave', '~> 1.2'
 ruby '2.3.5'
 
 # Use Capistrano for deployment
